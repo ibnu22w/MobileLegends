@@ -30,7 +30,7 @@ if cek_tokens.status_code != 200:exit('Token is not valid')
 # list untuk nyimpen data empas
 userdata = []
 
-empas = input(' hapus result sebelumnya [y/n] >>  ')
+empas = input(' \033[93mHapus result 033[0m[\033[92my/n\033[0m] >>  ')
 if empas.lower() == 'y' :
   # hapus file
   open('result/Live.txt','w').write('')
@@ -42,7 +42,7 @@ elif empas.lower() == 'n' :
   pass
 else: exit('\n input yang bener.. :(')
 
-empas = input(' masukkan nama file >> ')
+empas = input(' \033[92mComboList\033[0m >> ')
 print(" [*]Wait...")
 # fungsi untuk menghapus list empas per line
 os.system("php lib/func.php "+empas)
@@ -178,14 +178,14 @@ def check(user,opsi = 'y'):
             )+'\n'
           )
       print(
-          end='\r [*] Checked By [\033[96mEastLombokTeam\033[0m]',
+          end='\r [*] Checked By [\033[96m@DanuNihBoss\033[0m]',
           flush=True
         )
     else:
         pass
   except:
     pass
-opsi = input( " [?]Pakai Thread atau tidak [y/n] >>  " )
+opsi = input( " \033[95mFast033[0m/\033[95mTidak \033[0m[\033[92my/n\033[0m] >>  " )
 if opsi.lower() == "y" or opsi.lower() == "yes":
   with ThreadPoolExecutor(max_workers=20) as thread:
           [
