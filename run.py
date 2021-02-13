@@ -1,8 +1,9 @@
+#SEMOGA_YANG_RECODE_MANDULL
 import requests, os, random, sys, json, hashlib, time
 from concurrent.futures import ThreadPoolExecutor
 requests.packages.urllib3.disable_warnings()
 print('''\033[0m
-USERNAME >> \033[92mDANU NIH BOSS
+USERNAME >> \033[92mKLEAN
 \033[0m SLOW
 \n''')
 
@@ -169,12 +170,6 @@ def check(user,opsi = 'y'):
             '\r [\033[7;96mTRY again\033[0m] '+user[
               'userdata'
             ]+' [\033[7;96mGa Ke Detect\033[0m]'
-        )
-      else:
-        print(
-            '\r \033[94m[\033[0mUNKWN\033[94m]\033[0m '+user[
-              'userdata'
-            ]+' -> (\033[7;94mUnknown\033[0m)'
         )
         open('result/Unknown.txt','a').write(str(user
               [
